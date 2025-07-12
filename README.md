@@ -1,22 +1,18 @@
 
-# 🛠 Ansible Install NGINX
+# ⚙️ نصب NGINX با Ansible
 
-پروژه‌ای برای نصب NGINX روی سرور لینوکسی با استفاده از Ansible.
+این پروژه شامل یک playbook برای نصب خودکار وب‌سرور NGINX روی سرور لینوکسی است.
 
----
+## 🧰 پیش‌نیازها
+- نصب Ansible روی سیستم شما
+- فایل inventory برای دسترسی SSH به سرور
 
-## 📦 ابزارها
+## 🛠️ اجرای playbook
+```bash
+ansible-playbook -i hosts.ini playbook.yml
 
-- Ansible
-- Ubuntu Server (یا ماشین مجازی با SSH)
-- NGINX
+🎯 کاربردها
 
----
+یادگیری Infrastructure Automation
 
-## ⚙️ اجرا:
-
-ابتدا inventory فایل بساز (مثلاً `hosts.ini`):
-
-```ini
-[web]
-192.168.56.10 ansible_user=ubuntu ansible_ssh_private_key_file=~/.ssh/id_rsa
+آماده‌سازی سرور در محیط Production
